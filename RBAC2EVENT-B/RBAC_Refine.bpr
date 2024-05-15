@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="evt1/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="ROLES">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="role_i" org.eventb.core.type="ROLES"/>
+        <org.eventb.core.prIdent name="role_j" org.eventb.core.type="ROLES"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤∧⊤"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="COI⊆ROLES">
+            <org.eventb.core.prIdent name="COI" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="RoleToPermissionAssignment∈ROLES ↔ PERMISSIONS">
+            <org.eventb.core.prIdent name="PERMISSIONS" org.eventb.core.type="ℙ(PERMISSIONS)"/>
+            <org.eventb.core.prIdent name="RoleToPermissionAssignment" org.eventb.core.type="ℙ(ROLES×PERMISSIONS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="UserToRoleAssignment∈USERS ↔ ROLES">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="UserToRoleAssignment" org.eventb.core.type="ℙ(USERS×ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="SessionRoles∈SESSIONS ↔ ROLES">
+            <org.eventb.core.prIdent name="SESSIONS" org.eventb.core.type="ℙ(SESSIONS)"/>
+            <org.eventb.core.prIdent name="SessionRoles" org.eventb.core.type="ℙ(SESSIONS×ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="role_i∈ROLES∧role_j∈ROLES"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="UserSessions∈USERS ↔ SESSIONS">
+            <org.eventb.core.prIdent name="SESSIONS" org.eventb.core.type="ℙ(SESSIONS)"/>
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="UserSessions" org.eventb.core.type="ℙ(USERS×SESSIONS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="evt1/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="ROLES">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7"/>
+                            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p8"/>
+                            <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p9"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="COI" org.eventb.core.type="ℙ(ROLES)"/>
+        <org.eventb.core.prIdent name="CoI_i" org.eventb.core.type="ℙ(ROLES)"/>
+        <org.eventb.core.prIdent name="CoI_j" org.eventb.core.type="ℙ(ROLES)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="COI⊆ROLES"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="RoleToPermissionAssignment∈ROLES ↔ PERMISSIONS">
+            <org.eventb.core.prIdent name="PERMISSIONS" org.eventb.core.type="ℙ(PERMISSIONS)"/>
+            <org.eventb.core.prIdent name="RoleToPermissionAssignment" org.eventb.core.type="ℙ(ROLES×PERMISSIONS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="UserToRoleAssignment∈USERS ↔ ROLES">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="UserToRoleAssignment" org.eventb.core.type="ℙ(USERS×ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="CoI_i⊆COI∧CoI_j⊆COI∧CoI_i∩CoI_j=(∅ ⦂ ℙ(ROLES))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="SessionRoles∈SESSIONS ↔ ROLES">
+            <org.eventb.core.prIdent name="SESSIONS" org.eventb.core.type="ℙ(SESSIONS)"/>
+            <org.eventb.core.prIdent name="SessionRoles" org.eventb.core.type="ℙ(SESSIONS×ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="CoI_i⊆COI"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="UserSessions∈USERS ↔ SESSIONS">
+            <org.eventb.core.prIdent name="SESSIONS" org.eventb.core.type="ℙ(SESSIONS)"/>
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="UserSessions" org.eventb.core.type="ℙ(USERS×SESSIONS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="CoI_i∩CoI_j=(∅ ⦂ ℙ(ROLES))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="CoI_j⊆COI"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="evt1/grd4/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="ROLES,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="p13,p14,p15"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="CoI_i" org.eventb.core.type="ℙ(ROLES)"/>
+        <org.eventb.core.prIdent name="CoI_j" org.eventb.core.type="ℙ(ROLES)"/>
+        <org.eventb.core.prIdent name="UserToRoleAssignment" org.eventb.core.type="ℙ(USERS×ROLES)"/>
+        <org.eventb.core.prIdent name="role_i" org.eventb.core.type="ROLES"/>
+        <org.eventb.core.prIdent name="role_j" org.eventb.core.type="ROLES"/>
+        <org.eventb.core.prIdent name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="COI⊆ROLES">
+            <org.eventb.core.prIdent name="COI" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="user∈USERS∧role_i∈CoI_i∧role_j∈CoI_j∧role_i∈UserToRoleAssignment[{user}]⇒¬role_j∈UserToRoleAssignment[{user}]"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="UserToRoleAssignment∈USERS ↔ ROLES"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="role_i∈UserToRoleAssignment[{user}]"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="CoI_i⊆COI∧CoI_j⊆COI∧CoI_i∩CoI_j=(∅ ⦂ ℙ(ROLES))">
+            <org.eventb.core.prIdent name="COI" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="role_i∈CoI_i"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬role_j∈UserToRoleAssignment[{user}]"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="CoI_i∩CoI_j=(∅ ⦂ ℙ(ROLES))"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="CoI_j⊆COI">
+            <org.eventb.core.prIdent name="COI" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="RoleToPermissionAssignment∈ROLES ↔ PERMISSIONS">
+            <org.eventb.core.prIdent name="PERMISSIONS" org.eventb.core.type="ℙ(PERMISSIONS)"/>
+            <org.eventb.core.prIdent name="RoleToPermissionAssignment" org.eventb.core.type="ℙ(ROLES×PERMISSIONS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="SessionRoles∈SESSIONS ↔ ROLES">
+            <org.eventb.core.prIdent name="SESSIONS" org.eventb.core.type="ℙ(SESSIONS)"/>
+            <org.eventb.core.prIdent name="SessionRoles" org.eventb.core.type="ℙ(SESSIONS×ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="role_j∈CoI_j"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="CoI_i⊆COI">
+            <org.eventb.core.prIdent name="COI" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="UserSessions∈USERS ↔ SESSIONS">
+            <org.eventb.core.prIdent name="SESSIONS" org.eventb.core.type="ℙ(SESSIONS)"/>
+            <org.eventb.core.prIdent name="UserSessions" org.eventb.core.type="ℙ(USERS×SESSIONS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="⊤∧role_i∈CoI_i∧role_j∈CoI_j∧role_i∈UserToRoleAssignment[{user}]⇒¬role_j∈UserToRoleAssignment[{user}]"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="role_i∈CoI_i∧role_j∈CoI_j∧role_i∈UserToRoleAssignment[{user}]⇒¬role_j∈UserToRoleAssignment[{user}]"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

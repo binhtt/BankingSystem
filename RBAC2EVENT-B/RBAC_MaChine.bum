@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="UserToRoleAssignment≔∅" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="RoleToPermissionAssignment≔∅" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="RBAC_Context"/>
+    <org.eventb.core.invariant name="?" org.eventb.core.label="inv1" org.eventb.core.predicate="Administrator⊆ROLES∧CreditManager⊆ROLES&#13;&#10;∧CreditAnalyst⊆ROLES∧TransactionOfficer⊆ROLES∧&#13;&#10;Customer⊆ROLES∧Audit⊆ROLES"/>
+    <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AssignUserToRoles">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="role_i"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="UserToRoleAssignment≔UserToRoleAssignment∪{user↦role_i}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd1" org.eventb.core.predicate="role_i∈ROLES∧role_j∈ROLES"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd2" org.eventb.core.predicate="user∈USERS"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd3" org.eventb.core.predicate="{role_i,role_j}∈coi∧(role_i∈UserToRoleAssignment[{user}])⇒&#13;&#10;¬(role_j∉UserToRoleAssignment[{user}])"/>
+        <org.eventb.core.parameter name="5" org.eventb.core.identifier="role_j"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="+" org.eventb.core.label="inv2" org.eventb.core.predicate="UserToRoleAssignment∈USERS↔ROLES"/>
+    <org.eventb.core.invariant name="," org.eventb.core.label="inv3" org.eventb.core.predicate="RoleToPermissionAssignment∈ROLES↔PERMISSIONS"/>
+    <org.eventb.core.invariant name="A" org.eventb.core.label="inv4" org.eventb.core.predicate="coi⊆ℙ(ROLES)"/>
+    <org.eventb.core.invariant name="6" org.eventb.core.label="inv5" org.eventb.core.predicate="∀u,r,r1·u∈USERS∧{r,r1}∈coi∧(u↦r∈UserToRoleAssignment)⇒&#13;&#10;¬(u↦r1∈UserToRoleAssignment)"/>
+    <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AssignRolesToPermissions">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="role"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="perm"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="role∈ROLES"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="perm∈PERMISSIONS"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="RoleToPermissionAssignment≔RoleToPermissionAssignment∪{role↦perm}" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="." org.eventb.core.identifier="usr"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="usr↦role∈UserToRoleAssignment"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="8" org.eventb.core.identifier="Administrator"/>
+    <org.eventb.core.variable name="9" org.eventb.core.identifier="CreditManager"/>
+    <org.eventb.core.variable name=":" org.eventb.core.identifier="CreditAnalyst"/>
+    <org.eventb.core.variable name=";" org.eventb.core.identifier="TransactionOfficer"/>
+    <org.eventb.core.variable name="=" org.eventb.core.identifier="Customer"/>
+    <org.eventb.core.variable name="&gt;" org.eventb.core.identifier="Audit"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="UserToRoleAssignment"/>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="RoleToPermissionAssignment"/>
+    <org.eventb.core.variable name="4" org.eventb.core.identifier="coi"/>
+    <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RemoveUserToRole">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="usr"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="role"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="usr∈USERS"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="role∈ROLES"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="usr↦role∈UserToRoleAssignment"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="UserToRoleAssignment≔UserToRoleAssignment∖{usr↦role}" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>
